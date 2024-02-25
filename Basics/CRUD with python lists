@@ -10,7 +10,7 @@ print("second number:", my_list[1])  # accessing the second item
 print("whole list:", my_list)  # accessing the whole list
 
 # Update
-my_list[1] = "6"  # updating the second item
+my_list[1] = 6  # updating the second item
 print("after updating:", my_list)
 
 # Delete
