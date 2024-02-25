@@ -1,0 +1,13 @@
+# for loop: when you know beforehand how many times to iterate over a sequence (predetermined no)
+# while loop: when you want to iterate over a sequence as long as a condition holds true (can be any no of times)
+
+# examle of for loop
+my_list = [1, 2, 3, 4, 5]
+for i in range(len(my_list)): # length of list predetermined
+  print(my_list[i])
+
+# examle of while loop
+num = input("enter a positive non zero number: ")
+while int(num) <= 0: # no of times iterated depends on user input
+  num = input("not positive non zero number, try again: ")
+print(num + " is a valid number")
