@@ -1,0 +1,33 @@
+# quick sort: selects "pivot" element from array and partitions the other elements into two sub-arrays according to whether they are less than or greater than the pivot, sub-arrays recursively sorted
+# without list comprehension
+def quick_sort(A):
+  if len(A) <= 1:
+    return A
+  pivot = A[len(A) // 2]
+  left = []
+  mid = []
+  right = []
+  for element in A:
+    if element < pivot:
+      left.append(element)
+    elif element == pivot:
+      mid.append(element)
+    else:
+      right.append(element)
+  return quick_sort(left) + mid + quick_sort(right)
+
+data = [4, 7, 1, 5, 2, 8, 3]
+print(quick_sort(data))
+
+# with list comprehension
+def quick_sort(A):
+  if len(A) <= 1:
+    return A
+  pivot = A[len(A) // 2]
+  left = [x for x in A if x < pivot]
+  mid = [x for x in A if x == pivot]
+  right = [x for x in A if x > pivot]
+  return quick_sort(left) + mid + quick_sort(right)
+
+data = [4, 7, 1, 5, 2, 8, 3]
+print(quick_sort(data))
