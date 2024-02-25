@@ -1,4 +1,5 @@
 # Term-1-assessment
+video links: https://drive.google.com/drive/folders/1EOGhWhOzR1MoUR9YYL0aJW2uwz6trQNR?usp=sharing
 **Basics**
 - conditional statements (if, else, elif)
 - loops (for, while)
