@@ -1,0 +1,27 @@
+# validation: ensures the accuracy, completeness, and integrity of data, processes, or systems
+
+original_x = ["zabc1", "zdef2", "zghi3", "zjkl4", "zmno5"]
+valid_x = False
+while not valid_x: # iterates as long as x is not valid
+  x = input("enter x: ")
+  # preence check
+  if x == '': # empty input
+    print("empty")
+  # length check
+  elif len(x) != 5: # input must be 5 characters long
+    print("x must be exactly 5 characters")
+  # data type / format check
+  elif not(x[0:4].isalpha() and x[-1].isdigit()): # first 4 characters must be letters, last ,ust be number
+    print("first 4 characters must be letters, last character must be number")
+  # range check
+  elif not 1 <= int(x[-1]) <= 5: # number must be between 1 and 5 inclusive
+    print("last character must be between 1 and 5")
+  # check digit
+  elif not x[0] == 'z': # first character must be z
+    print("first character incorrect")
+  # existence check
+  elif not x in original_x: # if does not match with any item in original list
+    print("not part of original x values")
+  else:
+    valid_x = True
+print(x, "valid")
