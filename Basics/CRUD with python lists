@@ -1,0 +1,18 @@
+# CRUD: create, read, update, delete
+# list: built-in data structure that represents collection of elements in specific order
+
+# Create
+my_list = [1, 2, 3, 4, 5]  
+
+# Read
+print("first number:", my_list[0])  # accessing the first item
+print("second number:", my_list[1])  # accessing the second item
+print("whole list:", my_list)  # accessing the whole list
+
+# Update
+my_list[1] = "6"  # updating the second item
+print("after updating:", my_list)
+
+# Delete
+del my_list[0]  # deleting the first item
+print("after deleting:", my_list)
