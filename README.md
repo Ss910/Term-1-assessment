@@ -1,7 +1,7 @@
 # Term-1-assessment
 **Basics**
 - conditional statements (if, else, elif)
-- loops (for, a while)
+- loops (for, while)
 - functions (maybe)
 - Crud with python list/array
 - crud with dictionary (maybe)
