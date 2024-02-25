@@ -1,0 +1,10 @@
+# recursion: breaking down problem into smaller, similar subproblems, solving each subproblem recursively until base case is reached
+def factorial(n):
+    # base case, solved without recursion
+    if n == 0 or n == 1:
+        return 1
+    # recursive case, uses factorial function again
+    else:
+        return n * factorial(n - 1) # all results combined to calculate the factorial of original input
+
+print(factorial(5)) # 5! = 5(4!), 4! = 4(3!), n! = n*factorial(n-1)
