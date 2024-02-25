@@ -1,0 +1,11 @@
+# if: to check a condition, if condition is true, execute code inside
+# elif: to check another condition, if condition is true, execute code inside
+# else: if none of the above conditions are true, execute code inside
+number = int(input("enter a number: "))
+
+if number > 0:
+    print("your number is positive")
+elif number == 0:
+    print("your number is zero")
+else:
+    print("your number is negative")
