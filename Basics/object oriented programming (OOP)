@@ -1,0 +1,92 @@
+# class vs object
+# class: a blueprint or template that defines the characteristics and behavior of an object
+class Person: # class creation
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def display(self):
+    print(f"{self.name}, {self.age}")
+person1 = Person("tom", 17) # object creation
+person1.display()
+
+
+# encapsulation: hidesg the internal details of an object and provides a way to access and manipulate the object's data only through its defined methods
+class Person:
+  def __init__(self, name, age):
+    self._name = name
+    self._age = age
+
+  def get_name(self): # access
+    return self._name
+
+  def get_age(self): # access 
+    return self._age
+
+  def set_age(self, new_age): # manipulate
+    if new_age >= 0:
+      self._age = new_age
+    else:
+      print("invalid age")
+
+  def display(self):
+    print (f"{self.get_name()}, {self.get_age()}")
+
+person1 = Person("Tom", 17)
+
+person1.display()
+person1.set_age(18)
+person1.display()
+
+
+# inheritance: allows classes to inherit attributes and behaviors from other classes
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def display(self):
+    print(f"{self.name}, {self.age}")
+
+class Student(Person): # student inherits attributes from person
+  def __init__(self, name, age, class_number):
+    super().__init__(name, age)
+    self.class_number = class_number
+
+  def display(self):
+    super().display()
+    print(f"from class {self.class_number}")
+
+person1 = Person("Tom", 17)
+student1 = Student("Tom", 17, "24/13")
+
+person1.display()
+student1.display()
+
+
+# polymorphism: ability of objects of different classes to respond to the same method or function call
+class Shape:
+  def calculate_area(self):
+    pass
+
+class Rectangle(Shape):
+  def __init__(self, length, width):
+    self.length = length
+    self.width = width
+
+  def calculate_area(self):
+    return self.length * self.width
+
+class Circle(Shape):
+  def __init__(self, radius):
+    self.radius = radius
+
+  def calculate_area(self):
+    return 3.142 * self.radius ** 2
+
+rect1 = Rectangle(10, 5)
+cir1 = Circle(5)
+
+shapes = [rect1, cir1]
+for Shape in shapes:
+  print(Shape.calculate_area()) # same method used, but uses different formulae
