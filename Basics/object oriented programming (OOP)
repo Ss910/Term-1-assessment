@@ -11,7 +11,7 @@ person1 = Person("tom", 17) # object creation
 person1.display()
 
 
-# encapsulation: hidesg the internal details of an object and provides a way to access and manipulate the object's data only through its defined methods
+# encapsulation: hides the internal details of an object and provides a way to access and manipulate the object's data only through its defined methods
 class Person:
   def __init__(self, name, age):
     self._name = name
