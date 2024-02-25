@@ -1,4 +1,4 @@
-# insertion sort:
+# insertion sort: at each iteration, removes one element from the input data, finds the location it belongs to in the sorted array, and inserts it there
 def insertion_sort(A):
   for i in range(len(A)):
     key = A[i]
